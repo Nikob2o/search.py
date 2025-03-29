@@ -25,8 +25,9 @@ def rechercher_fichiers_avec_mots(mots):
         # Vérifier si la commande a réussi
         if resultat.returncode == 0:
             # Afficher les résultats
-            print(resultat.stdout)
-        elif resultat.stdout == "":
+            if resultat.stdout.strip():
+                print(reslutat.stdout)
+            else:
                 print('Auncune correspondance')
         else:
             # Afficher l'erreur
